@@ -38,7 +38,7 @@ public class ParkingLotControllerTest {
     private MockMvc mvc;
 
     @Test
-    public void should_add_a_parking_lot() throws Exception {
+    void should_add_a_parking_lot() throws Exception {
         ParkingLot parkingLot = createParkingLot("ParkingLot1", 50, "Pasay");
 
         when(parkingLotService.addParkingLot(any())).thenReturn(parkingLot);
@@ -51,7 +51,7 @@ public class ParkingLotControllerTest {
     }
 
     @Test
-    public void should_delete_existing_company() throws Exception {
+    void should_delete_existing_company() throws Exception {
         ParkingLot parkingLot = createParkingLot("ParkingLot1", 50, "Pasay");
 
         when(parkingLotService.deleteParkingLot("ParkingLot1")).thenReturn("ParkingLot1 Record has been deleted.");
@@ -139,8 +139,6 @@ public class ParkingLotControllerTest {
         result.andExpect(status().isNotFound())
                 .andExpect(jsonPath("$.code").value(404));
     }
-
-
 
 
     private ParkingLot createParkingLot(String name, Integer capacity, String location) {
