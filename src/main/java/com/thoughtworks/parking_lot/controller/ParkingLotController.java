@@ -39,7 +39,12 @@ public class ParkingLotController {
         return parkingLotService.getSpecificParkingLot(name);
     }
 
-
+    @PutMapping(value = "/{name}", produces = {"application/json"})
+    @ResponseStatus(code = HttpStatus.OK)
+    public ParkingLot modifySpecificParkingLot(@PathVariable String name, @RequestBody ParkingLot parkingLot) throws NotFoundException
+    {
+        return parkingLotService.updateSpecificParkingLot(name, parkingLot);
+    }
 
 
 

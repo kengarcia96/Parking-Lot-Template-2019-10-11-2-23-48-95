@@ -45,4 +45,14 @@ public class ParkingLotService {
         }
         throw new NotFoundException(RECORD_NOT_FOUND);
     }
+
+    public ParkingLot updateSpecificParkingLot(String name, ParkingLot updateParkingLot) throws NotFoundException{
+        ParkingLot parkingLot = parkingLotRepository.findOnebyName(name);
+        if(parkingLot != null){
+            parkingLot.setCapacity(updateParkingLot.getCapacity());
+            parkingLotRepository.save(parkingLot);
+            return parkingLot;
+        }
+        throw new NotFoundException(RECORD_NOT_FOUND);
+    }
 }

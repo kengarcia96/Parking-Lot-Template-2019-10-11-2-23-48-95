@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
@@ -112,6 +114,37 @@ public class ParkingLotControllerTest {
         result.andExpect(status().isNotFound())
                 .andExpect(jsonPath("$.code").value(404));
     }
+
+
+    @Test
+    void should_update_parking_lot_capacity() throws Exception {
+        ParkingLot updatedParkingLot= createParkingLot("ParkingLotTest", 50, "Caloocan City");
+
+        when(parkingLotService.updateSpecificParkingLot(eq("ParkingLotTest"), any())).thenReturn(updatedParkingLot);
+        ResultActions result = mvc.perform(put("/parkingLots/ParkingLotTest")
+                .contentType(APPLICATION_JSON)
+                .content(mapToJson(updatedParkingLot)));
+
+        result.andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("ParkingLotTest"));
+    }
+
+
+
+    @Test
+    void should_return_not_found_when_updating_parking_lot_info_name_parameter_does_not_exists() throws Exception {
+        ParkingLot updatedParkingLot= createParkingLot("ParkingLotTest", 50, "Caloocan City");
+
+        doThrow(NotFoundException.class).when(parkingLotService).updateSpecificParkingLot(eq("ParkingLotTest"), any());
+        ResultActions result = mvc.perform(put("/parkingLots/ParkingLotTest")
+                .contentType(APPLICATION_JSON)
+                .content(mapToJson(updatedParkingLot)));
+
+        result.andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.code").value(404));
+    }
+
+
 
 
     private ParkingLot createParkingLot(String name, Integer capacity, String location) {
