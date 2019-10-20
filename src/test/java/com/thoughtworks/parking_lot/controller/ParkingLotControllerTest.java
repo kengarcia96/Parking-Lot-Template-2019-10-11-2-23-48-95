@@ -63,6 +63,19 @@ public class ParkingLotControllerTest {
     }
 
     @Test
+    void should_return_not_found_when_deleting_a_parking_lot_that_does_not_exist() throws Exception {
+        ParkingLot parkingLot = createParkingLot("ParkingLot1", 50, "Pasay");
+
+        doThrow(NotFoundException.class).when(parkingLotService).deleteParkingLot(eq("ParkingLot1"));
+        ResultActions result = mvc.perform(delete("/parkingLots/ParkingLot1")
+                .contentType(APPLICATION_JSON)
+                .content(mapToJson(parkingLot)));
+
+        result.andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.code").value(404));
+    }
+
+    @Test
     void should_return_all_companies() throws Exception {
         ParkingLot parkingLot1= createParkingLot("ZzzParkingLot", 50, "Caloocan City");
         ParkingLot parkingLot2 = createParkingLot("AaaParkingLot", 10, "Pasay City");
