@@ -33,6 +33,12 @@ public class ParkingLotController {
         return parkingLotService.getParkingLots(page, pageSize);
     }
 
+    @GetMapping(path="/{name}", produces={"application/json"})
+    @ResponseStatus(code = HttpStatus.OK)
+    public ParkingLot getSpecificParkingLot(@PathVariable String name) throws NotFoundException{
+        return parkingLotService.getSpecificParkingLot(name);
+    }
+
 
 
 

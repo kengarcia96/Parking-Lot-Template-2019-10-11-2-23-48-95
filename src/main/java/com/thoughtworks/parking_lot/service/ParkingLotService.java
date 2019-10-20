@@ -36,4 +36,13 @@ public class ParkingLotService {
     public Iterable<ParkingLot> getParkingLots(Integer page, Integer pageSize) {
         return parkingLotRepository.findAll(PageRequest.of(page, pageSize, Sort.by("name").ascending()));
     }
+
+
+    public ParkingLot getSpecificParkingLot(String name) throws NotFoundException{
+        ParkingLot parkingLot = parkingLotRepository.findOnebyName(name);
+        if(parkingLot != null){
+            return parkingLot;
+        }
+        throw new NotFoundException(RECORD_NOT_FOUND);
+    }
 }
