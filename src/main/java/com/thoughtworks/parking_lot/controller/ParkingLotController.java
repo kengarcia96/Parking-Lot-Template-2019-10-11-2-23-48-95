@@ -27,6 +27,14 @@ public class ParkingLotController {
         return parkingLotService.deleteParkingLot(name);
     }
 
+    @GetMapping(produces = {"application/json"})
+    @ResponseStatus(code = HttpStatus.OK)
+    public Iterable<ParkingLot> getParkingLots(@RequestParam(required = false, defaultValue = "0") Integer page, @RequestParam(required = false, defaultValue = "15") Integer pageSize) {
+        return parkingLotService.getParkingLots(page, pageSize);
+    }
+
+
+
 
 
 }

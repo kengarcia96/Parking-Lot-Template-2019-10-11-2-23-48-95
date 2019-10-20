@@ -12,11 +12,14 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
+import java.util.Arrays;
+import java.util.Collections;
+
+import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -24,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class ParkingLotControllerTest {
 
     private static final int PAGE = 0;
-    private static final int PAGE_SIZE = 10;
+    private static final int PAGE_SIZE = 15;
 
 
     @MockBean
@@ -55,6 +58,21 @@ public class ParkingLotControllerTest {
 
         result.andExpect(status().isOk());
     }
+
+    @Test
+    void should_return_all_companies() throws Exception {
+        ParkingLot parkingLot1= createParkingLot("ZzzParkingLot", 50, "Caloocan City");
+        ParkingLot parkingLot2 = createParkingLot("AaaParkingLot", 10, "Pasay City");
+        when(parkingLotService.getParkingLots(PAGE, PAGE_SIZE)).thenReturn(Arrays.asList(parkingLot2, parkingLot1));
+
+        ResultActions result = mvc.perform(get("/parkingLots"));
+
+        result.andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(2)))
+                .andExpect(jsonPath("$[0].name").value("AaaParkingLot"))
+                .andExpect(jsonPath("$[1].name").value("ZzzParkingLot"));
+    }
+
 
     private ParkingLot createParkingLot(String name, Integer capacity, String location) {
         ParkingLot parkingLot = new ParkingLot();

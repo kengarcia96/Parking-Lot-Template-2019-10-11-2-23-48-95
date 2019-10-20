@@ -5,6 +5,8 @@ import com.thoughtworks.parking_lot.repository.ParkingLotRepository;
 import javassist.NotFoundException;
 import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -29,5 +31,9 @@ public class ParkingLotService {
         }
 
         throw new NotFoundException(RECORD_NOT_FOUND);
+    }
+
+    public Iterable<ParkingLot> getParkingLots(Integer page, Integer pageSize) {
+        return parkingLotRepository.findAll(PageRequest.of(page, pageSize, Sort.by("name").ascending()));
     }
 }
