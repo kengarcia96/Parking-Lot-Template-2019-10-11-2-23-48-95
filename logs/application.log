@@ -12402,3 +12402,147 @@ java.lang.IllegalArgumentException: Entity must not be null!
 2019-10-20 21:57:09.109 DEBUG 11472 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
 2019-10-20 21:57:09.109 DEBUG 11472 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@212ea111]
 2019-10-20 21:57:09.113 DEBUG 11472 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-10-20 22:03:11.257 DEBUG 1644 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-10-20 22:03:11.275 DEBUG 1644 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-10-20 22:03:11.277 DEBUG 1644 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-10-20 22:03:11.278 DEBUG 1644 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-10-20 22:03:11.280 DEBUG 1644 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-10-20 22:03:11.280 DEBUG 1644 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-10-20 22:03:11.351  INFO 1644 --- [main] c.t.p.c.ParkingLotControllerTest         : Starting ParkingLotControllerTest on DESKTOP-NS2E9T2 with PID 1644 (started by vostR in D:\ITA4_GIT_Projects\Parking-Lot-Template-2019-10-11-2-23-48-95)
+2019-10-20 22:03:11.366  INFO 1644 --- [main] c.t.p.c.ParkingLotControllerTest         : No active profile set, falling back to default profiles: default
+2019-10-20 22:03:11.531 DEBUG 1644 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@27eedb64
+2019-10-20 22:03:13.853 DEBUG 1644 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2019-10-20 22:03:13.853 DEBUG 1644 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2019-10-20 22:03:13.854 DEBUG 1644 --- [main] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-10-20 22:03:13.866 DEBUG 1644 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2019-10-20 22:03:13.866 DEBUG 1644 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2019-10-20 22:03:13.868 DEBUG 1644 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-10-20 22:03:13.868 DEBUG 1644 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-10-20 22:03:13.869 DEBUG 1644 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-10-20 22:03:13.871 DEBUG 1644 --- [main] o.h.v.i.xml.config.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-10-20 22:03:13.872 DEBUG 1644 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2019-10-20 22:03:13.872 DEBUG 1644 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2019-10-20 22:03:13.873 DEBUG 1644 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-10-20 22:03:13.873 DEBUG 1644 --- [main] o.h.v.i.xml.config.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2019-10-20 22:03:13.883 DEBUG 1644 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-10-20 22:03:13.884 DEBUG 1644 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-10-20 22:03:13.884 DEBUG 1644 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-10-20 22:03:13.885 DEBUG 1644 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-10-20 22:03:13.885 DEBUG 1644 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-10-20 22:03:14.196 DEBUG 1644 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-10-20 22:03:14.713  INFO 1644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-20 22:03:14.734 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-10-20 22:03:14.859 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2019-10-20 22:03:14.899 DEBUG 1644 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-10-20 22:03:14.908 DEBUG 1644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-10-20 22:03:15.106  INFO 1644 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-10-20 22:03:15.106  INFO 1644 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-10-20 22:03:15.128  INFO 1644 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 22 ms
+2019-10-20 22:03:15.195  INFO 1644 --- [main] c.t.p.c.ParkingLotControllerTest         : Started ParkingLotControllerTest in 5.063 seconds (JVM running for 7.625)
+2019-10-20 22:03:15.402 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.thoughtworks.parking_lot.controller.ParkingLotController.deleteParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:15.440 DEBUG 1644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.thoughtworks.parking_lot.entity.CustomError com.thoughtworks.parking_lot.advice.ParkingLotControllerAdvice.handleNotFoundException(javassist.NotFoundException)
+2019-10-20 22:03:15.440 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-10-20 22:03:15.455 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.CustomError@7654f833]
+2019-10-20 22:03:15.455 DEBUG 1644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [javassist.NotFoundException]
+2019-10-20 22:03:15.502 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.addParkingLot(com.thoughtworks.parking_lot.entity.ParkingLot)
+2019-10-20 22:03:15.549 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.thoughtworks.parking_lot.entity.ParkingLot@6af5bbd0]
+2019-10-20 22:03:15.549 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:15.549 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@dd71b20]
+2019-10-20 22:03:15.571 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.thoughtworks.parking_lot.controller.ParkingLotController.deleteParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:15.572 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:15.573 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing ["ParkingLot1 Record has been deleted."]
+2019-10-20 22:03:15.585 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.modifySpecificParkingLot(java.lang.String,com.thoughtworks.parking_lot.entity.ParkingLot) throws javassist.NotFoundException
+2019-10-20 22:03:15.587 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.thoughtworks.parking_lot.entity.ParkingLot@3a894088]
+2019-10-20 22:03:15.588 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:15.588 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@370c1968]
+2019-10-20 22:03:15.603 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.modifySpecificParkingLot(java.lang.String,com.thoughtworks.parking_lot.entity.ParkingLot) throws javassist.NotFoundException
+2019-10-20 22:03:15.604 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.thoughtworks.parking_lot.entity.ParkingLot@2f0bfe17]
+2019-10-20 22:03:15.605 DEBUG 1644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.thoughtworks.parking_lot.entity.CustomError com.thoughtworks.parking_lot.advice.ParkingLotControllerAdvice.handleNotFoundException(javassist.NotFoundException)
+2019-10-20 22:03:15.607 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-10-20 22:03:15.608 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.CustomError@3206174f]
+2019-10-20 22:03:15.609 DEBUG 1644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [javassist.NotFoundException]
+2019-10-20 22:03:15.628 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.getSpecificParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:15.630 DEBUG 1644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.thoughtworks.parking_lot.entity.CustomError com.thoughtworks.parking_lot.advice.ParkingLotControllerAdvice.handleNotFoundException(javassist.NotFoundException)
+2019-10-20 22:03:15.631 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-10-20 22:03:15.631 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.CustomError@42fb8c87]
+2019-10-20 22:03:15.632 DEBUG 1644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [javassist.NotFoundException]
+2019-10-20 22:03:15.647 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.Iterable<com.thoughtworks.parking_lot.entity.ParkingLot> com.thoughtworks.parking_lot.controller.ParkingLotController.getParkingLots(java.lang.Integer,java.lang.Integer)
+2019-10-20 22:03:15.652 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:15.659 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.thoughtworks.parking_lot.entity.ParkingLot@63cd2cd2, com.thoughtworks.parking_lot.entity.Parkin (truncated)...]
+2019-10-20 22:03:15.686 DEBUG 1644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.getSpecificParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:15.687 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:15.687 DEBUG 1644 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@656922a0]
+2019-10-20 22:03:15.703 DEBUG 1644 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@27eedb64, started on Sun Oct 20 22:03:11 SGT 2019
+2019-10-20 22:03:15.706  INFO 1644 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-20 22:03:43.130 DEBUG 12024 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-10-20 22:03:43.147 DEBUG 12024 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-10-20 22:03:43.149 DEBUG 12024 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-10-20 22:03:43.150 DEBUG 12024 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-10-20 22:03:43.158 DEBUG 12024 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-10-20 22:03:43.159 DEBUG 12024 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-10-20 22:03:43.434  INFO 12024 --- [main] c.t.p.c.ParkingLotControllerTest         : Starting ParkingLotControllerTest on DESKTOP-NS2E9T2 with PID 12024 (started by vostR in D:\ITA4_GIT_Projects\Parking-Lot-Template-2019-10-11-2-23-48-95)
+2019-10-20 22:03:43.438  INFO 12024 --- [main] c.t.p.c.ParkingLotControllerTest         : No active profile set, falling back to default profiles: default
+2019-10-20 22:03:43.469 DEBUG 12024 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3ad2e17
+2019-10-20 22:03:46.186 DEBUG 12024 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2019-10-20 22:03:46.187 DEBUG 12024 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2019-10-20 22:03:46.188 DEBUG 12024 --- [main] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-10-20 22:03:46.208 DEBUG 12024 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2019-10-20 22:03:46.209 DEBUG 12024 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2019-10-20 22:03:46.210 DEBUG 12024 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-10-20 22:03:46.212 DEBUG 12024 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-10-20 22:03:46.213 DEBUG 12024 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-10-20 22:03:46.215 DEBUG 12024 --- [main] o.h.v.i.xml.config.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-10-20 22:03:46.216 DEBUG 12024 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2019-10-20 22:03:46.217 DEBUG 12024 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2019-10-20 22:03:46.217 DEBUG 12024 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-10-20 22:03:46.219 DEBUG 12024 --- [main] o.h.v.i.xml.config.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2019-10-20 22:03:46.219 DEBUG 12024 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-10-20 22:03:46.219 DEBUG 12024 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-10-20 22:03:46.219 DEBUG 12024 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-10-20 22:03:46.219 DEBUG 12024 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-10-20 22:03:46.219 DEBUG 12024 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-10-20 22:03:46.472 DEBUG 12024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-10-20 22:03:47.197  INFO 12024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-20 22:03:47.265 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-10-20 22:03:47.415 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2019-10-20 22:03:47.466 DEBUG 12024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-10-20 22:03:47.488 DEBUG 12024 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-10-20 22:03:47.849  INFO 12024 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-10-20 22:03:47.850  INFO 12024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-10-20 22:03:47.904  INFO 12024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 54 ms
+2019-10-20 22:03:48.030  INFO 12024 --- [main] c.t.p.c.ParkingLotControllerTest         : Started ParkingLotControllerTest in 5.453 seconds (JVM running for 7.468)
+2019-10-20 22:03:48.434 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.thoughtworks.parking_lot.controller.ParkingLotController.deleteParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:48.485 DEBUG 12024 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.thoughtworks.parking_lot.entity.CustomError com.thoughtworks.parking_lot.advice.ParkingLotControllerAdvice.handleNotFoundException(javassist.NotFoundException)
+2019-10-20 22:03:48.517 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-10-20 22:03:48.518 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.CustomError@6920b0bc]
+2019-10-20 22:03:48.532 DEBUG 12024 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [javassist.NotFoundException]
+2019-10-20 22:03:48.621 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.addParkingLot(com.thoughtworks.parking_lot.entity.ParkingLot)
+2019-10-20 22:03:48.709 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.thoughtworks.parking_lot.entity.ParkingLot@6f9c5048]
+2019-10-20 22:03:48.718 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:48.723 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@4098dd77]
+2019-10-20 22:03:48.739 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.thoughtworks.parking_lot.controller.ParkingLotController.deleteParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:48.740 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:48.741 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing ["ParkingLot1 Record has been deleted."]
+2019-10-20 22:03:48.761 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.modifySpecificParkingLot(java.lang.String,com.thoughtworks.parking_lot.entity.ParkingLot) throws javassist.NotFoundException
+2019-10-20 22:03:48.769 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.thoughtworks.parking_lot.entity.ParkingLot@63cd2cd2]
+2019-10-20 22:03:48.770 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:48.771 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@557a84fe]
+2019-10-20 22:03:48.791 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.modifySpecificParkingLot(java.lang.String,com.thoughtworks.parking_lot.entity.ParkingLot) throws javassist.NotFoundException
+2019-10-20 22:03:48.792 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.thoughtworks.parking_lot.entity.ParkingLot@6deee370]
+2019-10-20 22:03:48.793 DEBUG 12024 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.thoughtworks.parking_lot.entity.CustomError com.thoughtworks.parking_lot.advice.ParkingLotControllerAdvice.handleNotFoundException(javassist.NotFoundException)
+2019-10-20 22:03:48.794 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-10-20 22:03:48.794 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.CustomError@49c17ba4]
+2019-10-20 22:03:48.795 DEBUG 12024 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [javassist.NotFoundException]
+2019-10-20 22:03:48.816 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.getSpecificParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:48.818 DEBUG 12024 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.thoughtworks.parking_lot.entity.CustomError com.thoughtworks.parking_lot.advice.ParkingLotControllerAdvice.handleNotFoundException(javassist.NotFoundException)
+2019-10-20 22:03:48.818 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-10-20 22:03:48.819 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.CustomError@43e065f2]
+2019-10-20 22:03:48.819 DEBUG 12024 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [javassist.NotFoundException]
+2019-10-20 22:03:48.835 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.Iterable<com.thoughtworks.parking_lot.entity.ParkingLot> com.thoughtworks.parking_lot.controller.ParkingLotController.getParkingLots(java.lang.Integer,java.lang.Integer)
+2019-10-20 22:03:48.841 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:48.850 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.thoughtworks.parking_lot.entity.ParkingLot@b112b13, com.thoughtworks.parking_lot.entity.Parking (truncated)...]
+2019-10-20 22:03:48.897 DEBUG 12024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingLot com.thoughtworks.parking_lot.controller.ParkingLotController.getSpecificParkingLot(java.lang.String) throws javassist.NotFoundException
+2019-10-20 22:03:48.898 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-20 22:03:48.898 DEBUG 12024 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@7e72a6cc]
+2019-10-20 22:03:48.936 DEBUG 12024 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3ad2e17, started on Sun Oct 20 22:03:43 SGT 2019
+2019-10-20 22:03:48.944  INFO 12024 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
