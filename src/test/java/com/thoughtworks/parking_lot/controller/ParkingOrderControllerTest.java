@@ -7,14 +7,12 @@ import com.thoughtworks.parking_lot.entity.ParkingOrder;
 import com.thoughtworks.parking_lot.service.ParkingLotService;
 import com.thoughtworks.parking_lot.service.ParkingOrderService;
 import javassist.NotFoundException;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.sql.Timestamp;
 
@@ -82,19 +80,32 @@ public class ParkingOrderControllerTest {
                     .andDo(print());
         }
 
+//        @Test
+//        void should_return_error_when_parking_is_full() throws Exception {
+//            ParkingLot parkingLot = new ParkingLot();
+//            when(parkingLot.getName()).thenReturn("ParkingLot1");
+//
+//            ParkingOrder parkingOrder = createParkingOrder();
+//
+//            ResultActions result = mvc.perform(post("/parkingLots/ParkingLot1/orders")
+//                    .contentType(APPLICATION_JSON)
+//                    .content(mapToJson(parkingOrder)));
+//
+//            result.andExpect(status().isBadRequest())
+//                    .andExpect(jsonPath("$.code").value(400));
+//        }
+
         @Test
         void should_return_error_when_parking_is_full() throws Exception {
-            ParkingLot parkingLot = new ParkingLot();
-            when(parkingLot.getName()).thenReturn("ParkingLot1");
-
             ParkingOrder parkingOrder = createParkingOrder();
 
-            ResultActions result = mvc.perform(post("/parkingLots/ParkingLot1/orders")
+            doThrow(NotFoundException.class).when(parkingOrderService).addParkingOrder(eq("parkinglotA"),any());
+            ResultActions result = mvc.perform(post("/parkingLots/parkinglotA/orders")
                     .contentType(APPLICATION_JSON)
                     .content(mapToJson(parkingOrder)));
 
-            result.andExpect(status().isBadRequest())
-                    .andExpect(jsonPath("$.code").value(400));
+            result.andExpect(status().isNotFound())
+                    .andExpect(jsonPath("$.code").value(404));
         }
 
 

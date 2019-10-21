@@ -1,9 +1,10 @@
 package com.thoughtworks.parking_lot.service;
 
-import com.thoughtworks.parking_lot.entity.ParkingOrder;
 import com.thoughtworks.parking_lot.entity.ParkingLot;
+import com.thoughtworks.parking_lot.entity.ParkingOrder;
 import com.thoughtworks.parking_lot.repository.ParkingLotRepository;
 import com.thoughtworks.parking_lot.repository.ParkingOrderRepository;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ public class ParkingOrderService {
 
     private static final String OPEN = "Open";
     private static final String CLOSED = "Closed";
+    private static final String THE_PARKING_LOT_IS_FULL = "The parking lot is full.";
 
     @Autowired
     private ParkingOrderRepository parkingOrderRepository;
@@ -22,10 +24,10 @@ public class ParkingOrderService {
     @Autowired
     private ParkingLotRepository parkingLotRepository;
 
-    public ParkingOrder addParkingOrder(String parkingLotName, ParkingOrder plateNumber) {
+    public ParkingOrder addParkingOrder(String parkingLotName, ParkingOrder plateNumber) throws NotFoundException {
         ParkingLot parkingLot = parkingLotRepository.findByName(parkingLotName);
         if (parkingLot.getCapacity() == 0) {
-            return null;
+            throw new NotFoundException(THE_PARKING_LOT_IS_FULL);
         }
         updateParkingLotCapacity(parkingLot);
         return parkingOrderRepository.save(orderInfo(parkingLotName, plateNumber));
