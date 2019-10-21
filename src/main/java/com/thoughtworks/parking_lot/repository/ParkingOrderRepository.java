@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ParkingOrderRepository extends JpaRepository<ParkingOrder, Long> {
+    ParkingOrder findByOrderNumber(String orderNumber);
 }

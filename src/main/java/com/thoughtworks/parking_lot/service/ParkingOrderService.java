@@ -14,6 +14,7 @@ import java.util.UUID;
 public class ParkingOrderService {
 
     private static final String OPEN = "Open";
+    private static final String CLOSED = "Closed";
 
     @Autowired
     private ParkingOrderRepository parkingOrderRepository;
@@ -48,4 +49,16 @@ public class ParkingOrderService {
         parkingLotRepository.save(parkingLot);
     }
 
+    public ParkingOrder updateParkingOrder(String orderNumber) {
+
+        ParkingOrder searchParkingOrder = parkingOrderRepository.findByOrderNumber(orderNumber);
+
+        if(searchParkingOrder != null){
+            searchParkingOrder.setOrderStatus(CLOSED);
+            searchParkingOrder.setCloseTime(new Timestamp(System.currentTimeMillis()));
+            parkingOrderRepository.save(searchParkingOrder);
+        }
+
+        return searchParkingOrder;
+    }
 }

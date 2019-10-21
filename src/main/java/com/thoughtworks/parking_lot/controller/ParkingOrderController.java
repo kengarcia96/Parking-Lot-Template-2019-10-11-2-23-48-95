@@ -19,5 +19,11 @@ public class ParkingOrderController {
         return parkingOrderService.addParkingOrder(parkingLotName, plateNumber);
     }
 
+    @PatchMapping(path = "/{orderNumber}", consumes = {"application/json"})
+    @ResponseStatus(code = HttpStatus.OK)
+    public ParkingOrder updateParkingOrder(@PathVariable String parkingLotName, @PathVariable String orderNumber){
+        return parkingOrderService.updateParkingOrder(orderNumber);
+    }
+
 }
 

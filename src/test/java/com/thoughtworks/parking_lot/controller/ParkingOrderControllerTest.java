@@ -19,12 +19,17 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(ParkingOrderController.class)
 public class ParkingOrderControllerTest {
+
+
+        private static final String CLOSED = "Closed";
 
         @MockBean
         private ParkingLotService parkingLotService;
@@ -47,6 +52,32 @@ public class ParkingOrderControllerTest {
             result.andExpect(status().isCreated())
                     .andExpect(jsonPath("$.plateNumber").value("TXT1234"));
         }
+
+        @Test
+        void should_update_parking_order_information() throws Exception{
+
+            ParkingLot parkingLot = new ParkingLot();
+            parkingLot.setName("ParkingLot1");
+            parkingLot.setCapacity(50);
+            parkingLot.setLocation("Pasay");
+
+
+            ParkingOrder parkingOrder = createParkingOrder();
+
+            when(parkingLotService.getSpecificParkingLot("ParkingLot1")).thenReturn(parkingLot);
+            parkingOrder.setOrderStatus(CLOSED);
+            parkingOrder.setCloseTime(Timestamp.valueOf("2019-10-21 01:00:00.0"));
+
+
+            when(parkingOrderService.updateParkingOrder("1")).thenReturn(parkingOrder);
+            ResultActions result = mvc.perform(patch("/parkingLots/ParkingLot1/orders/1", createParkingOrder())
+                    .contentType(APPLICATION_JSON)
+                    .content(mapToJson(parkingOrder)));
+
+            result.andExpect(status().isOk())
+                    .andDo(print());
+        }
+
 
         private ParkingOrder createParkingOrder() {
             ParkingOrder parkingOrder = new ParkingOrder();
