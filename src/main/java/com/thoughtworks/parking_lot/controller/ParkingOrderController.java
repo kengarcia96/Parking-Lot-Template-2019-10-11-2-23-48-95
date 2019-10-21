@@ -21,7 +21,7 @@ public class ParkingOrderController {
 
     @PatchMapping(path = "/{orderNumber}", consumes = {"application/json"})
     @ResponseStatus(code = HttpStatus.OK)
-    public ParkingOrder updateParkingOrder(@PathVariable String parkingLotName, @PathVariable String orderNumber){
+    public ParkingOrder updateParkingOrder(@PathVariable String parkingLotName, @PathVariable String orderNumber) {
         return parkingOrderService.updateParkingOrder(orderNumber);
     }
 
