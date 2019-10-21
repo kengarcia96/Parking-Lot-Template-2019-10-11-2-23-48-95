@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 @Entity
-public class Order {
+public class ParkingOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

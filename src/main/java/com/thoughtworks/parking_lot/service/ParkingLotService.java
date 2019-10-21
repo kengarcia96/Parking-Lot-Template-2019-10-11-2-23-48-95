@@ -18,12 +18,11 @@ public class ParkingLotService {
     private static final String RECORD_HAS_BEEN_DELETED= " Record has been deleted.";
 
     public ParkingLot addParkingLot(ParkingLot parkingLot) {
-            parkingLotRepository.save(parkingLot);
-            return parkingLot;
+          return parkingLotRepository.save(parkingLot);
     }
 
     public String deleteParkingLot(String name) throws NotFoundException {
-        ParkingLot parkingLot = parkingLotRepository.findOnebyName(name);
+        ParkingLot parkingLot = parkingLotRepository.findByName(name);
         if(parkingLot != null){
             parkingLotRepository.delete(parkingLot);
             return parkingLot.getName() + RECORD_HAS_BEEN_DELETED;
@@ -38,7 +37,7 @@ public class ParkingLotService {
 
 
     public ParkingLot getSpecificParkingLot(String name) throws NotFoundException{
-        ParkingLot parkingLot = parkingLotRepository.findOnebyName(name);
+        ParkingLot parkingLot = parkingLotRepository.findByName(name);
         if(parkingLot != null){
             return parkingLot;
         }
@@ -46,7 +45,7 @@ public class ParkingLotService {
     }
 
     public ParkingLot updateSpecificParkingLot(String name, ParkingLot updateParkingLot) throws NotFoundException{
-        ParkingLot parkingLot = parkingLotRepository.findOnebyName(name);
+        ParkingLot parkingLot = parkingLotRepository.findByName(name);
         if(parkingLot != null){
             parkingLot.setCapacity(updateParkingLot.getCapacity());
             parkingLotRepository.save(parkingLot);

@@ -1,6 +1,6 @@
 package com.thoughtworks.parking_lot.controller;
 
-import com.thoughtworks.parking_lot.entity.Order;
+import com.thoughtworks.parking_lot.entity.ParkingOrder;
 import com.thoughtworks.parking_lot.service.ParkingOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,8 +15,9 @@ public class ParkingOrderController {
 
     @PostMapping(produces={"application/json"})
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Order addParkingOrder(@PathVariable("parkingLotName") String parkingLotName, String plateNumber){
+    public ParkingOrder addParkingOrder(@PathVariable("parkingLotName") String parkingLotName, @RequestBody ParkingOrder plateNumber){
         return parkingOrderService.addParkingOrder(parkingLotName, plateNumber);
     }
 
 }
+
