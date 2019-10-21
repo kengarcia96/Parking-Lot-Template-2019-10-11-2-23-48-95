@@ -14529,3 +14529,46 @@ java.lang.NullPointerException: null
 2019-10-21 18:06:10.680 DEBUG 56196 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingLot@a22c4d8]
 2019-10-21 18:06:10.687 DEBUG 56196 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2f62ea70, started on Mon Oct 21 18:06:09 CST 2019
 2019-10-21 18:06:10.688  INFO 56196 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-21 20:50:49.454 DEBUG 1632 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-10-21 20:50:49.454 DEBUG 1632 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-10-21 20:50:49.454 DEBUG 1632 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-10-21 20:50:49.454 DEBUG 1632 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-10-21 20:50:49.470 DEBUG 1632 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-10-21 20:50:49.470 DEBUG 1632 --- [background-preinit] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-10-21 20:50:49.610  INFO 1632 --- [main] c.t.p.c.ParkingOrderControllerTest       : Starting ParkingOrderControllerTest on DESKTOP-NS2E9T2 with PID 1632 (started by vostR in D:\ITA4_GIT_Projects\Parking-Lot-Template-2019-10-11-2-23-48-95)
+2019-10-21 20:50:49.626  INFO 1632 --- [main] c.t.p.c.ParkingOrderControllerTest       : No active profile set, falling back to default profiles: default
+2019-10-21 20:50:49.657 DEBUG 1632 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@39a2bb97
+2019-10-21 20:50:51.953 DEBUG 1632 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2019-10-21 20:50:51.953 DEBUG 1632 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2019-10-21 20:50:51.953 DEBUG 1632 --- [main] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.i.xml.config.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-10-21 20:50:51.969 DEBUG 1632 --- [main] o.h.v.i.xml.config.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2019-10-21 20:50:51.985 DEBUG 1632 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-10-21 20:50:51.985 DEBUG 1632 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-10-21 20:50:51.985 DEBUG 1632 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-10-21 20:50:51.985 DEBUG 1632 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-10-21 20:50:51.985 DEBUG 1632 --- [main] o.h.v.i.engine.ValidatorFactoryImpl      : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-10-21 20:50:52.266 DEBUG 1632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-10-21 20:50:52.703  INFO 1632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 20:50:52.735 DEBUG 1632 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-10-21 20:50:52.828 DEBUG 1632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2019-10-21 20:50:52.860 DEBUG 1632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-10-21 20:50:52.875 DEBUG 1632 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-10-21 20:50:53.047  INFO 1632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-10-21 20:50:53.047  INFO 1632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-10-21 20:50:53.063  INFO 1632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+2019-10-21 20:50:53.125  INFO 1632 --- [main] c.t.p.c.ParkingOrderControllerTest       : Started ParkingOrderControllerTest in 4.457 seconds (JVM running for 8.987)
+2019-10-21 20:50:53.422 DEBUG 1632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.thoughtworks.parking_lot.entity.ParkingOrder com.thoughtworks.parking_lot.controller.ParkingOrderController.addParkingOrder(java.lang.String,com.thoughtworks.parking_lot.entity.ParkingOrder)
+2019-10-21 20:50:53.500 DEBUG 1632 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.thoughtworks.parking_lot.entity.ParkingOrder@24a86066]
+2019-10-21 20:50:53.516 DEBUG 1632 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2019-10-21 20:50:53.516 DEBUG 1632 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.thoughtworks.parking_lot.entity.ParkingOrder@3b5c665c]
+2019-10-21 20:50:53.578 DEBUG 1632 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@39a2bb97, started on Mon Oct 21 20:50:49 SGT 2019
+2019-10-21 20:50:53.594  INFO 1632 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
